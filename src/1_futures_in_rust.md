@@ -122,25 +122,20 @@ The `Waker` is how the reactor tells the executor that a specific Future is read
 understand the life cycle and ownership of a Waker, you'll understand how futures work from a user's
 perspective. Here is the life cycle:
 
-- A Waker is created by the **executor.** A common, but not required, method is
-  to create a new Waker for each Future that is registered with the executor.
-- When a future is registered with an executor, it’s given a clone of the Waker
+- A Waker is created by the **executor.**
+- When a future is polled the first time by the executor, it’s given a clone of the Waker
   object created by the executor. Since this is a shared object (e.g. an
   `Arc<T>`), all clones actually point to the same underlying object.  Thus,
   anything that calls _any_ clone of the original Waker will wake the particular
   Future that was registered to it.
 - The future clones the Waker and passes it to the reactor, which stores it to
   use later.
+  
+You could think of a "future" like a channel for the `Waker`: The channel starts with the future that's polled the first time by the executor and is passed a handle to a `Waker`. It ends in a leaf-future which passes that handle to the reactor.
 
-At some point in the future, the reactor will decide that the future is ready to run. It will wake
-the future via the Waker that it stored. This action will do what is necessary to get the executor
-in a position to poll the future.
+>Note that the `Waker` is wrapped in a rather uninteresting `Context` struct which we will learn more about later. The interesting part is the `Waker` that is passed on.
 
-The Waker object implements everything that we associate with
-[task](https://doc.rust-lang.org/std/task/index.html). The object is specific to the type of
-executor in use, but all Wakers share a similar interface (it's not a trait because
-embedded systems can't handle trait objects, but a useful abstraction is to think of it as a trait
-object).
+At some point in the future, the reactor will decide that the future is ready to run. It will wake the future via the Waker that it stored. This action will do what is necessary to get the executor in a position to poll the future. We'll go into more detail on Wakers in the [Waker and Context chapter.](3_waker_context.md#understanding-the-waker)
 
 Since the interface is the same across all executors, reactors can _in theory_ be completely
 oblivious to the type of the executor, and vice-versa. **Executors and reactors never need to
