@@ -156,24 +156,24 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 
 ```rust, edition2021
 # #![feature(naked_functions)]
-#  use std::{arch::asm, ptr};
-# 
+#  use std::arch::asm;
+#
 #  const DEFAULT_STACK_SIZE: usize = 1024 * 1024 * 2;
 #  const MAX_THREADS: usize = 4;
 #  static mut RUNTIME: usize = 0;
-# 
+#
 #  pub struct Runtime {
 #      threads: Vec<Thread>,
 #      current: usize,
 #  }
-# 
+#
 #  #[derive(PartialEq, Eq, Debug)]
 #  enum State {
 #      Available,
 #      Running,
 #      Ready,
 #  }
-# 
+#
 #  struct Thread {
 #      id: usize,
 #      stack: Vec<u8>,
@@ -181,7 +181,7 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #      state: State,
 #      task: Option<Box<dyn Fn()>>,
 #  }
-# 
+#
 #  #[derive(Debug, Default)]
 #  #[repr(C)]
 #  struct ThreadContext {
@@ -194,7 +194,7 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #      rbp: u64,
 #      thread_ptr: u64,
 #  }
-# 
+#
 #  impl Thread {
 #      fn new(id: usize) -> Self {
 #          Thread {
@@ -206,7 +206,7 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #          }
 #      }
 #  }
-# 
+#
 #  impl Runtime {
 #      pub fn new() -> Self {
 #          let base_thread = Thread {
@@ -216,37 +216,37 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #              state: State::Running,
 #              task: None,
 #          };
-# 
+#
 #          let mut threads = vec![base_thread];
 #          threads[0].ctx.thread_ptr = &threads[0] as *const Thread as u64;
 #          let mut available_threads: Vec<Thread> = (1..MAX_THREADS).map(|i| Thread::new(i)).collect();
 #          threads.append(&mut available_threads);
-# 
+#
 #          Runtime {
 #              threads,
 #              current: 0,
 #          }
 #      }
-# 
+#
 #      pub fn init(&self) {
 #          unsafe {
 #              let r_ptr: *const Runtime = self;
 #              RUNTIME = r_ptr as usize;
 #          }
 #      }
-# 
+#
 #      pub fn run(&mut self) -> ! {
 #          while self.t_yield() {}
 #          std::process::exit(0);
 #      }
-# 
+#
 #      fn t_return(&mut self) {
 #          if self.current != 0 {
 #              self.threads[self.current].state = State::Available;
 #              self.t_yield();
 #          }
 #      }
-# 
+#
 #      #[inline(never)]
 #      fn t_yield(&mut self) -> bool {
 #          let mut pos = self.current;
@@ -259,15 +259,15 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #                  return false;
 #              }
 #          }
-# 
+#
 #          if self.threads[self.current].state != State::Available {
 #              self.threads[self.current].state = State::Ready;
 #          }
-# 
+#
 #          self.threads[pos].state = State::Running;
 #          let old_pos = self.current;
 #          self.current = pos;
-# 
+#
 #          unsafe {
 #             let old: *mut ThreadContext = &mut self.threads[old_pos].ctx;
 #             let new: *const ThreadContext = &self.threads[pos].ctx;
@@ -275,7 +275,7 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #         }
 #         self.threads.len() > 0
 #      }
-# 
+#
 #      pub fn spawn<F: Fn() + 'static>(f: F){
 #          unsafe {
 #              let rt_ptr = RUNTIME as *mut Runtime;
@@ -284,7 +284,7 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #                  .iter_mut()
 #                  .find(|t| t.state == State::Available)
 #                  .expect("no available thread.");
-# 
+#
 #              let size = available.stack.len();
 #              let s_ptr = available.stack.as_mut_ptr().offset(size as isize);
 #              let s_ptr = (s_ptr as usize & !15) as *mut u8;
@@ -299,19 +299,19 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #          }
 #      }
 #  }
-# 
+#
 #  fn call(thread: u64) {
 #      let thread = unsafe { &*(thread as *const Thread) };
 #      if let Some(f) = &thread.task {
 #          f();
 #      }
 #  }
-# 
+#
 #  #[naked]
-#  unsafe fn skip() {
+#  unsafe extern "C" fn skip() {
 #      asm!("ret", options(noreturn))
 #  }
-# 
+#
 #  fn guard() {
 #      unsafe {
 #          let rt_ptr = RUNTIME as *mut Runtime;
@@ -320,7 +320,7 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #          rt.t_return();
 #      };
 #  }
-# 
+#
 #  pub fn yield_thread() {
 #      unsafe {
 #          let rt_ptr = RUNTIME as *mut Runtime;
@@ -329,7 +329,7 @@ _**Press the expand icon in the top right corner to show the example code (you'l
 #  }
 # #[naked]
 # #[no_mangle]
-# unsafe fn switch() {
+# unsafe extern "C" fn switch() {
 #     asm!(
 #         "mov 0x00[rdi], rsp",
 #         "mov 0x08[rdi], r15",
