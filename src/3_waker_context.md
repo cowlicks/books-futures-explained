@@ -36,7 +36,7 @@ is how we implement a `Waker` . Creating a `Waker` involves creating a `vtable`
 which allows us to use dynamic dispatch to call methods on a _type erased_ trait
 object we construct ourselves.
 
-The `Waker` implementation is specific to the type of executor in use, but all Wakers share a similar interface. It's useful to think of it as a `Trait`. It's not implemented as such since that would require us to treat it like a trait object which _forces_ dynamic dispatch for all users (which in turn degrades performance when it's not needed). In addition, even if we accepted the performance cost forced on all users, it either restricts the API severely by requiring a `&dyn Waker` like trait object, or would require an `Arc<dyn Waker>` which in turn requires a heap allocation which a lot of embedded-like systems can't do.
+The `Waker` implementation is specific to the type of executor in use, but all Wakers share a similar interface. It's useful to think of it as a `Trait`. It's not implemented as such since that would require us to treat it like a trait object like `&dyn Waker` or `Arc<dyn Waker>` which either restricts the API by requiring a `&dyn Waker` trait object, or would require an `Arc<dyn Waker>` which in turn requires a heap allocation which a lot of embedded-like systems can't do.
 
 Having the Waker implemented the way it is supports users creating a statically-allocated wakers and even more exotic mechanisms to on platforms where that makes sense.
 
