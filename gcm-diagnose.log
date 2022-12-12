@@ -1,0 +1,203 @@
+﻿Diagnose log at 2022-12-12T21:46:29Z
+
+AppPath: git-credential-manager
+InstallDir: 
+Version: 2.0.877+c7c35983b8
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 19044)
+Reading environment variables... OK
+ Variables:
+HOMEPATH=\Users\cf
+DriverData=C:\Windows\System32\Drivers\DriverData
+COMPUTERNAME=DESKTOP-372EPA8
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+OneDrive=C:\Users\cf\OneDrive - W B Samson AS
+ChocolateyLastPathUpdate=132006090649689040
+WT_PROFILE_ID={574e775e-4f2a-5b96-ac1e-a2962a402336}
+LANG=nb.UTF-8
+TMP=C:\Users\cf\AppData\Local\Temp
+PROCESSOR_REVISION=9e0a
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC;.CPL
+VSCODE_INJECTION=1
+GIT_ASKPASS=c:\Program Files\Microsoft VS Code\resources\app\extensions\git\dist\askpass.sh
+POWERSHELL_DISTRIBUTION_CHANNEL=MSI:Windows 10 Home
+TEMP=C:\Users\cf\AppData\Local\Temp
+LOCALAPPDATA=C:\Users\cf\AppData\Local
+MSYSTEM=MINGW64
+TERM=xterm-256color
+PGLOCALEDIR=C:\Program Files\PostgreSQL\10\share\locale
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+GOPATH=C:\Users\cf\dev\go
+ProgramW6432=C:\Program Files
+USERDOMAIN=DESKTOP-372EPA8
+PGUSER=postgres
+VSCODE_GIT_ASKPASS_NODE=C:\Program Files\Microsoft VS Code\Code.exe
+Path=C:/Program Files/Git/mingw64/libexec/git-core;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\cf\bin;C:\Program Files\PowerShell\7;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\OpenSSL\bin;C:\Program Files (x86)\vim\vim80;C:\Program Files\WinMerge;C:\Program Files\CMake\bin;C:\Go\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\PuTTY\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\SysGCC\raspberry\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\dotnet\;C:\Program Files\PowerShell\7\;C:\Program Files\Git\cmd;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Users\cf\.cargo\bin;C:\Users\cf\AppData\Local\Microsoft\WindowsApps;C:\Program Files\PostgreSQL\10\bin;C:\Users\cf\MyApps;C:\Users\cf\dev\go\bin;C:\Users\cf\.dotnet\tools;C:\Program Files (x86)\Dr. Memory\bin\;C:\Users\cf\AppData\Local\Programs\Fiddler;C:\Program Files\Tesseract-OCR;C:\Program Files (x86)\GnuWin32\bin;C:\cygwin64\usr\local\lib;C:\Users\cf\go\bin;C:\Users\cf\AppData\Local\Microsoft\WindowsApps;C:\Program Files\qemu;C:\Users\cf\.dotnet\tools;C:\Program Files\heroku\bin;C:\Users\cf\AppData\Roaming\npm;C:\Users\cf\dev\java\jdk-16\bin
+TERM_PROGRAM=vscode
+PROCESSOR_LEVEL=6
+NUMBER_OF_PROCESSORS=12
+TMPDIR=C:\Users\cf\AppData\Local\Temp
+PROMPT=$P$G
+TERM_PROGRAM_VERSION=1.73.1
+PGDATABASE=postgres
+ProgramFiles(x86)=C:\Program Files (x86)
+PUBLIC=C:\Users\Public
+VSCODE_GIT_IPC_HANDLE=\\.\pipe\vscode-git-835874194e-sock
+CommonProgramFiles=C:\Program Files (x86)\Common Files
+WT_SESSION=44c90a34-b416-4508-9804-2d9a09975bcb
+WSLENV=WT_SESSION::WT_PROFILE_ID
+CHROME_CRASHPAD_PIPE_NAME=\\.\pipe\crashpad_6032_LUERKPSXFNMPHSYG
+VSCODE_GIT_ASKPASS_MAIN=c:\Program Files\Microsoft VS Code\resources\app\extensions\git\dist\askpass-main.js
+PGDATA=C:\Program Files\PostgreSQL\10\data
+ProgramData=C:\ProgramData
+ProgramFiles=C:\Program Files (x86)
+ChocolateyInstall=C:\ProgramData\chocolatey
+PLINK_PROTOCOL=ssh
+PQ_LIB_DIR=C:\Program Files\PostgreSQL\10\lib
+SystemRoot=C:\WINDOWS
+ORIGINAL_XDG_CURRENT_DESKTOP=undefined
+HOME=C:\Users\cf
+CommonProgramW6432=C:\Program Files\Common Files
+LOGONSERVER=\\DESKTOP-372EPA8
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+COLORTERM=truecolor
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-372EPA8
+PGPORT=5432
+APPDATA=C:\Users\cf\AppData\Roaming
+HOMEDRIVE=C:
+configsetroot=C:\WINDOWS\ConfigSetRoot
+OneDriveCommercial=C:\Users\cf\OneDrive - W B Samson AS
+PSModulePath=C:\Users\cf\OneDrive\Dokumenter\PowerShell\Modules;C:\Program Files\PowerShell\Modules;c:\program files\powershell\7\Modules;C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\PowerShell\Modules\
+USERNAME=cf
+PROCESSOR_ARCHITEW6432=AMD64
+PROCESSOR_ARCHITECTURE=x86
+USERPROFILE=C:\Users\cf
+OS=Windows_NT
+ComSpec=C:\WINDOWS\system32\cmd.exe
+SystemDrive=C:
+windir=C:\WINDOWS
+OneDriveConsumer=C:\Users\cf\OneDrive
+ALLUSERSPROFILE=C:\ProgramData
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\cf\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\cf\AppData\Local\Temp\066b45919e3c59fe8520696c'... OK
+Reading from temporary file 'C:\Users\cf\AppData\Local\Temp\066b45919e3c59fe8520696c'... OK
+Deleting temporary file 'C:\Users\cf\AppData\Local\Temp\066b45919e3c59fe8520696c'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\cf
+UserDataDirectoryPath: C:\Users\cf\.gcm
+GetCurrentDirectory(): C:\Users\cf\dev\rust\articles\books-futures-explained
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:50572/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.39.0.windows.1'
+Locating current repository... OK
+Git repository at 'C:/Users/cf/dev/rust/articles/books-futures-explained/.git'
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	core.editor="C:\\Program Files\\Microsoft VS Code\\bin\\code" --wait
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=input
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/cf/.gitconfig	winupdater.recentlyseenversion=2.25.0.windows.1
+file:C:/Users/cf/.gitconfig	user.email=cf@samson.no
+file:C:/Users/cf/.gitconfig	user.name=Carl Fredrik Samson
+file:C:/Users/cf/.gitconfig	core.eol=lf
+file:C:/Users/cf/.gitconfig	core.autocrlf=input
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/cfsamson/books-futures-explained
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+file:.git/config	branch.master.remote=origin
+file:.git/config	branch.master.merge=refs/heads/master
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker not supported.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\cf\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\cf\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
