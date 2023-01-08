@@ -96,7 +96,7 @@ runtime.
 In this book I'll use the term "green threads" to mean stackful coroutines to differentiate
 them from the other continuation mechanisms described in this chapter. You can, however, see
 the term "green threads" be used to describe a broader set of continuation mechanisms in different
-littrature or discussions on the internet.
+literature or discussions on the internet.
 
 Green threads use the same mechanism as an OS - creating a thread for
 each task, setting up a stack, saving the CPU's state, and jumping from one
